@@ -1,0 +1,311 @@
+* .main-navigation bar style based on https://www.cssscript.com/create-a-multi-level-drop-down-menu-with-pure-css/ */
+
+.main-navigation {
+padding-right: 10px;
+}
+
+.main-navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1; /* Done so that the navigation bar will remain on top */
+}
+
+.main-navigation li {
+  display: block;
+  position: relative;
+  float: right;
+  background: #AAA;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #888;
+  margin-left: -2px;
+}
+
+#LinkedInIcon {
+  background: #FFF;
+  color: #000;
+  border-style: none;
+  margin-right: 2px;
+}
+
+#LinkedInIcon:hover a {
+  background: #FFF;
+}
+
+.main-navigation .yellow a {
+  background: #FFCC00;
+  color: #FFF;
+}
+.main-navigation .yellow:hover a { /* second level hover color */
+  background: rgba(255, 204, 0, 1);
+}
+.main-navigation .yellow:hover li a:hover { /* third level hover color */
+  background: rgba(255, 204, 0, 0.7);
+}
+
+.main-navigation .green a {
+  background: #009933;
+  color: #FFF;
+}
+.main-navigation .green:hover a { /* second level hover color */
+  background: rgba(0, 153, 51, 1);
+}
+.main-navigation .green:hover li a:hover { /* third level hover color */
+  background: rgba(0, 153, 51, 0.7);
+}
+
+.main-navigation .blue a {
+  background: #003399;
+  color: #FFF;
+}
+.main-navigation .blue:hover a { /* second level hover color */
+  background: rgba(0, 51, 153, 1);
+}
+.main-navigation .blue:hover li a:hover { /* third level hover color */
+  background: rgba(0, 51, 153, 0.7);
+}
+
+.main-navigation .red a {
+  background: #CC0000;
+  color: #FFF;
+}
+.main-navigation .red:hover a { /* second level hover color */
+  background: rgba(204, 0, 0, 1);
+}
+.main-navigation .red:hover li a:hover { /* third level hover color */
+  background: rgba(204, 0, 0, 0.7);
+}
+
+.main-navigation li ul {
+	display: none;
+}
+
+.main-navigation a {
+	  display: block;
+	  padding: 1em;
+	  text-decoration: none;
+	  white-space: nowrap;
+	  color: #FFF;
+	  font-size: 12px;
+	  font-family: "Helvetica Neue",  Helvetica, sans-serif;
+	  font-weight: bold;
+}
+
+.main-navigation li:hover > ul {
+  display: block;
+  position: absolute;
+}
+
+.main-navigation li:hover li { float: none; }
+
+.main-navigation li:hover a { background: #888; }
+
+.main-navigation li:hover li a:hover { background: #AAA; }
+
+.main-navigation li ul li { border-top: 0; }
+
+.main-navigation ul ul {
+  left: 100%;
+  top: 0;
+  margin-left: 2px;
+}
+.main-navigation ul ul li {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #888;
+  margin-top: -2px;
+}
+
+h1 {
+	background-image: url("H1Left.png");
+	background-repeat: no-repeat;
+	background-position: left top, right bottom;
+	background-color: #aaa;
+	border-radius: 0px 0px 22px 0px;
+	position:relative;
+    	margin: 10px;
+    	padding: 5px 0px 5px 45px;
+	color: white;
+	font-size: 22px;
+	/* font-family: Prototype, "Helvetica Neue", Helvetica, sans-serif; Prototype doesn't look good on mobile!*/
+	font-family: "Helvetica Neue",  Helvetica, sans-serif;
+	font-weight: 300;
+	white-space: nowrap;
+	text-transform: uppercase;
+}
+
+/* This section creates a generic backshadow, but the shadow's color propery must be overridden */
+h1::after {
+    content: '';
+    position: absolute;
+    z-index: -1; /* hide shadow behind image */
+	/* 
+-webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+ */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);                
+    width: 90%; 
+    left: 5%; /* one half of the remaining 30% */
+    height: 24px;
+    bottom: 0;
+}
+
+h2 {
+	font-size: 12px;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	padding: 0 0 0 15px;
+	font-weight: bold;
+}
+
+h5 {
+	font-size: 10px;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	padding: 0 0 0 15px;
+	font-weight: bold;
+}
+
+p {
+	font-size: 10px;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	padding: 0 0 0 15px;
+	max-width: 8.27in;
+}
+
+ul {
+    list-style-type: none;
+	font-size: 10px;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	padding: 0 0 0 15px;
+}
+
+a:hover {
+    text-shadow: 0 2px 10px #000;
+}
+
+a:visited {
+    color: rgb(121, 121, 121);
+    text-decoration: underline;
+}
+
+.yellow h1::after {
+	box-shadow: 0 5px 20px rgba(255, 204, 0, 0.5); 
+}
+.yellow a {
+	color: #EEBB00;
+}
+.yellow a:hover {
+	text-shadow: 0 2px 10px #FFCC00; 
+}
+
+.green h1::after {
+	box-shadow: 0 5px 10px rgba(0, 153, 51, 0.5); 
+}
+.green a {
+	color: #009933;
+}
+.green a:hover {
+	text-shadow: 0 2px 10px #009933; 
+}
+
+#GreenOverlay {
+	position: relative;
+	left: -24px;
+	top: -565px;
+	z-index: -1;
+	margin-right: -40px;
+	margin-bottom: -600px;
+}
+
+.blue h1::after {
+	box-shadow: 0 5px 20px rgba(0, 51, 153, 0.5); 
+}
+.blue a {
+	color: #003399;
+}
+.blue a:hover {
+	text-shadow: 0 2px 10px #003399; 
+}
+
+#BlueOverlay {
+	position: relative;
+	left: -87px;
+	top: -1470px;
+	z-index: -2;
+	margin-right: -100px;
+	margin-bottom: -1500px;
+}
+
+.red h1::after {
+	box-shadow: 0 5px 20px rgba(204, 0, 0, 0.5); 
+}
+.red a {
+	color: #CC0000;
+}
+.red a:hover {
+	text-shadow: 0 2px 10px #cc0000; 
+}
+
+#RedOverlay {
+	position: relative;
+	left: -142px;
+	top: -2855px;
+	z-index: -3;
+	margin-right: -175px;
+	margin-bottom: -2886px;
+}
+
+.ContentBox {
+	min-height: 64px;
+	min-width: 64px;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 25px;
+	border-color: black;
+	padding: 15px;
+    color: white;
+	font-size: 12px;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	
+}
+/* 
+Meant for use as the top headding within a ContentBox
+ */
+h3 {
+	margin-top: 0px;
+    margin-bottom: 10px;
+	color: white;
+	font-size: 24px;
+	font-family: "Helvetica Neue",  Helvetica, sans-serif;
+	font-weight: 500;
+}
+/* 
+Meant for use as the second headding within a ContentBox
+ */
+h4 {
+    margin: 0px;
+	color: white;
+	font-size: 18px;
+	font-family: "Helvetica Neue",  Helvetica, sans-serif;
+	font-weight: 500;
+}
+.ContentBox ul {
+	margin-left: 20px;
+    list-style-type: disc;
+    color: white;
+	font-size: 12px;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+.ContentBox p {
+	font-size: 12px;
+}
+
+#Travel img {
+	width: 120%;
+	max-width: 1439px;
+	/* If the image size changes the value also needs to be updated in the Travel.html CSS for the autoscale size of the #Travel div. */
+	position: relative;
+	left: -10%;
+	top: -20px;
+	box-shadow: 0 6px 10px rgba(0, 39, 145, 0.3); 
+}
