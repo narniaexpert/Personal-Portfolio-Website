@@ -8,20 +8,20 @@
 *.m4v
 
 # Aliases
-/connect/feed.xml
-/connect/Media
-/connect/Media/*
-/connect/News
-/connect/News/*
-/connect/Scripts
-/connect/Scripts/*
-/design/feed.xml
-/design/gallery
-/design/gallery/*
-/design/Media
-/design/Media/*
-/design/Scripts
-/design/Scripts/*
+**/connect/feed.xml
+**/connect/Media
+**/connect/Media/**
+**/connect/News
+**/connect/News/**
+**/connect/Scripts
+**/connect/Scripts/**
+**/design/feed.xml
+**/design/gallery
+**/design/gallery/**
+**/design/Media
+**/design/Media/**
+**/design/Scripts
+**/design/Scripts/**
 
 ## macOS.gitignore template
 ## Get latest from https://github.com/github/gitignore/
