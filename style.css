@@ -22,17 +22,6 @@ padding-right: 10px;
   margin-left: -2px;
 }
 
-#LinkedInIcon {
-  background: #FFF;
-  color: #000;
-  border-style: none;
-  margin-right: 2px;
-}
-
-#LinkedInIcon:hover a {
-  background: #FFF;
-}
-
 .main-navigation .yellow a {
   background: #FFCC00;
   color: #FFF;
@@ -115,6 +104,12 @@ padding-right: 10px;
   border-width: 2px;
   border-color: #888;
   margin-top: -2px;
+}
+
+#signature {
+	width: 15%;
+	min-height: 40px;
+	aspect-ratio: 272/59;
 }
 
 h1 {
