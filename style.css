@@ -295,6 +295,11 @@ h4 {
 	font-size: 12px;
 }
 
+#Travel {
+	background-color: #003399;
+	text-align: center;
+}
+
 #Travel img {
 	width: 120%;
 	max-width: 1439px;
@@ -303,4 +308,8 @@ h4 {
 	left: -10%;
 	top: -20px;
 	box-shadow: 0 6px 10px rgba(0, 39, 145, 0.3); 
+}
+	
+#Extensive-World-Travel {
+	font-family: Lucida Calligraphy;
 }
